@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B692D14E-C97D-4252-ADC7-CC3D872C9CC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{74155CBA-885B-41C0-A9BC-4FCEC874ACCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Core", "src\PaninApi.Core\PaninApi.Core.csproj", "{5E6F6195-187A-4103-9EBB-79B31B45C730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Infrastructure", "src\PaninApi.Infrastructure\PaninApi.Infrastructure.csproj", "{A0DEAF33-8563-48BB-A858-0820C4DD054C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E6F6195-187A-4103-9EBB-79B31B45C730} = {B692D14E-C97D-4252-ADC7-CC3D872C9CC7}
+		{A0DEAF33-8563-48BB-A858-0820C4DD054C} = {B692D14E-C97D-4252-ADC7-CC3D872C9CC7}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E6F6195-187A-4103-9EBB-79B31B45C730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E6F6195-187A-4103-9EBB-79B31B45C730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E6F6195-187A-4103-9EBB-79B31B45C730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E6F6195-187A-4103-9EBB-79B31B45C730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DEAF33-8563-48BB-A858-0820C4DD054C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DEAF33-8563-48BB-A858-0820C4DD054C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DEAF33-8563-48BB-A858-0820C4DD054C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DEAF33-8563-48BB-A858-0820C4DD054C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
