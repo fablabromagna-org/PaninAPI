@@ -27,10 +27,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bced703-a828-4f54-8c05-e2704155c5ba" name="Default Changelist" comment="First commit.">
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/StudentClass.cs" afterDir="false" />
+    <list default="true" id="3bced703-a828-4f54-8c05-e2704155c5ba" name="Default Changelist" comment="Created student class and section fields.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaninApi.Core/Enums/OrderStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Core/Enums/OrderStatus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +56,6 @@
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Category.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/ItemCategory.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/Class1.cs" />
-        <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/OrderStatus.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/BaseUser.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Barman.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/ItemModifiers.cs" />
@@ -70,6 +68,7 @@
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/StudentClass.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/OrderStatus.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +96,7 @@
       <workItem from="1601060709348" duration="96000" />
       <workItem from="1601060934948" duration="143000" />
       <workItem from="1601061132636" duration="10285000" />
-      <workItem from="1601124934346" duration="1326000" />
+      <workItem from="1601124934346" duration="2058000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1601071202891</created>
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601071226552</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created student class and section fields.">
+      <created>1601126302423</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601126302423</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +142,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="First commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit." />
+    <MESSAGE value="Created student class and section fields." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created student class and section fields." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="272" key="Rider.ProjectTemplateDialog.Size" timestamp="1601062927107">
@@ -147,10 +154,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1601125546661" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1601071988785">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1601126304953">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601071988785" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601126304953" />
     <state x="739" y="384" key="cloudConfig.PluginsDialog" timestamp="1601060771526">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -113,7 +113,6 @@ namespace PaninApi.Infrastructure
             modelBuilder.Entity<CoffeeShop>().HasMany(_ => _.Orders).WithOne(_ => _.CoffeeShop)
                 .HasForeignKey(_ => _.CoffeeShopId).OnDelete(DeleteBehavior.Cascade);
 
-
             modelBuilder.Entity<User>().HasMany(_ => _.Orders).WithOne(_ => _.User).HasForeignKey(_ => _.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 

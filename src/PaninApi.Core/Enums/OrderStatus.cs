@@ -3,7 +3,7 @@ namespace PaninApi.Core.Enums
     public enum OrderStatus
     {
         Creating,
-        Placed,
+        Payed,
         Accepted,
         Ready,
         Rejected,
