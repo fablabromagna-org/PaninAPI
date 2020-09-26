@@ -12,7 +12,7 @@ namespace PaninApi.Core.Models
         
         public string UserId { get; set; }
         
-        public string CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }
         
         public OrderStatus Status { get; set; }
         
