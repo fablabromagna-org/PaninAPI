@@ -1,45 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bced703-a828-4f54-8c05-e2704155c5ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PaninApi.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Dtos/ItemDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Dtos/MeDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Dtos/OrderDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Enums/ItemCategory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Enums/ItemModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Enums/OrderStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/Barman.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/BaseUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/CoffeeShop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/Item.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/OrderItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/PaninApi.Core.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApi.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" afterDir="false" />
+    <list default="true" id="3bced703-a828-4f54-8c05-e2704155c5ba" name="Default Changelist" comment="First commit.">
+      <change afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/StudentClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +62,14 @@
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Barman.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/ItemModifiers.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/ItemModifier.cs" />
-        <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/OrderItem.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/CoffeeShop.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Item.cs" />
-        <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/User.cs" />
+        <option value="$PROJECT_DIR$/.gitattributes" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/StudentClass.cs" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" />
       </list>
     </option>
   </component>
@@ -89,7 +83,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="AndroidSettingsPageId" />
+    <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -102,8 +96,24 @@
       <updated>1601060696110</updated>
       <workItem from="1601060709348" duration="96000" />
       <workItem from="1601060934948" duration="143000" />
-      <workItem from="1601061132636" duration="8927000" />
+      <workItem from="1601061132636" duration="10285000" />
+      <workItem from="1601124934346" duration="1326000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit.">
+      <created>1601071202891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601071202891</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit.">
+      <created>1601071226552</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601071226552</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,19 +126,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -137,12 +135,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="First commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="272" key="Rider.ProjectTemplateDialog.Size" timestamp="1601062927107">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="272" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1080@0.0.1920.1080" timestamp="1601062927107" />
+    <state x="461" y="185" key="SettingsEditor" timestamp="1601125546661">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1601125546661" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1601071988785">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601071988785" />
     <state x="739" y="384" key="cloudConfig.PluginsDialog" timestamp="1601060771526">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -151,6 +159,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="832" y="384" key="cloudConfig.SelfSettingsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601060961124" />
+    <state x="761" y="446" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1601071698059">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="761" y="446" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601071698059" />
     <state x="616" y="250" key="run.anything.popup" timestamp="1601062938311">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -23,5 +23,7 @@ namespace PaninApi.Core.Models
         public virtual IEnumerable<OrderItem> Items { get; set; }
         
         public string Notes { get; set; }
+        
+        public StudentClass Class { get; set; }
     }
 }
