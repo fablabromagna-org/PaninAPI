@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Core", "src\PaninA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Infrastructure", "src\PaninApi.Infrastructure\PaninApi.Infrastructure.csproj", "{A0DEAF33-8563-48BB-A858-0820C4DD054C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.WebApi", "src\PaninApi.WebApi\PaninApi.WebApi.csproj", "{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5E6F6195-187A-4103-9EBB-79B31B45C730} = {B692D14E-C97D-4252-ADC7-CC3D872C9CC7}
 		{A0DEAF33-8563-48BB-A858-0820C4DD054C} = {B692D14E-C97D-4252-ADC7-CC3D872C9CC7}
+		{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D} = {B692D14E-C97D-4252-ADC7-CC3D872C9CC7}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5E6F6195-187A-4103-9EBB-79B31B45C730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,5 +29,9 @@ Global
 		{A0DEAF33-8563-48BB-A858-0820C4DD054C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0DEAF33-8563-48BB-A858-0820C4DD054C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0DEAF33-8563-48BB-A858-0820C4DD054C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
