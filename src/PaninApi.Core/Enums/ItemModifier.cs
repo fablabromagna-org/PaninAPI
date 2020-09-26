@@ -8,6 +8,6 @@ namespace PaninApi.Core.Enums
         Vegan = 1,
         Bio = 2,
         LactoseFree = 4,
-        GlutenFree = 6
+        GlutenFree = 8
     }
 }
