@@ -30,10 +30,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bced703-a828-4f54-8c05-e2704155c5ba" name="Default Changelist" comment="Created webapi project.">
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.WebApi/Controllers/BaseApiController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaninApi.WebApi/Controllers/BaseAuthApiController.cs" afterDir="false" />
+    <list default="true" id="3bced703-a828-4f54-8c05-e2704155c5ba" name="Default Changelist" comment="Created base controllers">
+      <change afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDesignTimeDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaninApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaninApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PaninApi.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApi.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApi.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaninApi.WebApi/PaninApi.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaninApi.WebApi/PaninApi.WebApi.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +72,18 @@
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Item.cs" />
         <option value="$PROJECT_DIR$/.gitattributes" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/StudentClass.cs" />
-        <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/OrderStatus.cs" />
-        <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/User.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.Core/Enums/ItemModifier.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.WebApi/Controllers/BaseControllerApi.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.WebApi/Controllers/BaseAuthApiController.cs" />
         <option value="$PROJECT_DIR$/src/PaninApi.WebApi/Controllers/BaseApiController.cs" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/DesignTimeDbContext.cs" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDesignTimeDbContext.cs" />
+        <option value="$PROJECT_DIR$/tests/PaninApi.Tests.Commons/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/appsettings.json" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Core/Models/Order.cs" />
+        <option value="$PROJECT_DIR$/src/PaninApi.Infrastructure/PaninApiDbContext.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +97,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.PaninApi.WebApi">
@@ -122,6 +131,10 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.PaninApi.WebApi: IIS Express" />
+      <item itemvalue=".NET Launch Settings Profile.PaninApi.WebApi" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -134,7 +147,9 @@
       <workItem from="1601060709348" duration="96000" />
       <workItem from="1601060934948" duration="143000" />
       <workItem from="1601061132636" duration="10285000" />
-      <workItem from="1601124934346" duration="7328000" />
+      <workItem from="1601124934346" duration="11175000" />
+      <workItem from="1601223262740" duration="1304000" />
+      <workItem from="1601224741605" duration="1584000" />
     </task>
     <task id="LOCAL-00001" summary="First commit.">
       <created>1601071202891</created>
@@ -185,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601132379096</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Created base controllers">
+      <created>1601133127269</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601133127269</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,21 +234,54 @@
     <MESSAGE value="Aggiunto responsabile della classe." />
     <MESSAGE value="Fixed glutenfree modifiers" />
     <MESSAGE value="Created webapi project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created webapi project." />
+    <MESSAGE value="Created base controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created base controllers" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="272" key="Rider.ProjectTemplateDialog.Size" timestamp="1601132279016">
+    <state x="552" y="181" key="#Plugins" timestamp="1601223186506">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1080@0.0.1920.1080" timestamp="1601132279016" />
-    <state x="461" y="185" key="SettingsEditor" timestamp="1601125546661">
+    <state x="552" y="181" key="#Plugins/0.0.1920.1080@0.0.1920.1080" timestamp="1601223186506" />
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601223509444">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1601125546661" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1601132380699">
+    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601223509444" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1601224568489">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601132380699" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1601224568489" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1601224568489">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1601224568489" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1601224568489">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1601224568489" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1601224568489">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1601224568489" />
+    <state x="552" y="272" key="Rider.ProjectTemplateDialog.Size" timestamp="1601222981960">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="272" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1080@0.0.1920.1080" timestamp="1601222981960" />
+    <state x="461" y="185" key="SettingsEditor" timestamp="1601223574812">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1601223574812" />
+    <state x="627" y="373" key="SignInWindow" timestamp="1601223329038">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="627" y="373" key="SignInWindow/0.0.1920.1080@0.0.1920.1080" timestamp="1601223329038" />
+    <state x="765" y="395" key="SubscriptionsDialog" timestamp="1601223335490">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="765" y="395" key="SubscriptionsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601223335490" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1601133129791">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1601133129791" />
     <state x="739" y="384" key="cloudConfig.PluginsDialog" timestamp="1601060771526">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -239,13 +294,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="761" y="446" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1601071698059" />
-    <state x="616" y="250" key="run.anything.popup" timestamp="1601062938311">
+    <state x="616" y="250" key="run.anything.popup" timestamp="1601226056546">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601062938311" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1601061919110">
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601226056546" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1601224194877">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601061919110" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1601224194877" />
   </component>
 </project>

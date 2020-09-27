@@ -19,14 +19,14 @@ namespace PaninApi.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            #region Primary keys
+            #region Keys
 
             modelBuilder.Entity<BaseUser>().HasKey(_ => _.Id);
             modelBuilder.Entity<CoffeeShop>().HasKey(_ => _.Id);
             modelBuilder.Entity<Order>().HasKey(_ => _.Id);
             modelBuilder.Entity<Item>().HasKey(_ => _.Id);
             modelBuilder.Entity<OrderItem>().HasKey(_ => new {_.ItemId, _.OrderId});
-
+            
             #endregion
 
             #region Default values
@@ -59,13 +59,10 @@ namespace PaninApi.Infrastructure
             modelBuilder.Entity<Order>().Property(_ => _.CreationDate).IsRequired();
             modelBuilder.Entity<Order>().Property(_ => _.UserId).IsRequired();
             modelBuilder.Entity<Order>().Property(_ => _.Notes).IsRequired(false);
-
+            
             modelBuilder.Entity<OrderItem>().Property(_ => _.ItemId).IsRequired();
             modelBuilder.Entity<OrderItem>().Property(_ => _.OrderId).IsRequired();
-
-            modelBuilder.Entity<StudentClass>().Property(_ => _.Class).IsRequired();
-            modelBuilder.Entity<StudentClass>().Property(_ => _.Section).IsRequired();
-
+            
             #endregion
 
             #region Charset
