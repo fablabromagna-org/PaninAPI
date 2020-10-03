@@ -1,0 +1,314 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/esavini2/PaninApi/1.0.0
+
+info:
+  version: "1.0.0"
+  title: PaninApi
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid
+
+  schemas:
+    $ref: './components/index.yaml'
+
+security:
+  - bearerAuth: []
+
+paths:
+  /me:
+    get:
+      summary: Profilo utente
+      description: >-
+        Restituisce il profilo utente attualmente salvato.
+
+      tags:
+        - user
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Me'
+              examples:
+                New user:
+                  value:
+                    id: "1234567890"
+                    orders:
+                      inProgress:
+                        - total: 30
+                          values:
+                            - status: 0
+                            -
+                      olds:
+
+        '401':
+          $ref: '#/components/responses/UnauthorizedError'
+
+  /orders:
+    get:
+      summary: Gets the orders
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    post:
+      summary: Creates an order
+      responses:
+        '200':
+          description: OK
+
+  /order/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        required: true
+
+    get:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    put:
+      summary: Edits an order
+      responses:
+        '200':
+          description: OK
+
+  /users:
+    get:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+      tags:
+        - user
+
+      responses:
+        '200':
+          description: OK
+
+  /user/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        required: true
+
+    get:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+      tags:
+        - user
+
+      responses:
+        '200':
+          description: OK
+
+    put:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+  /bars:
+    get:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    post:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+  /bar/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        required: true
+
+    put:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+  /bar/{barId}/items:
+    parameters:
+      - in: path
+        name: barId
+        schema:
+          type: string
+          format: uuid
+        required: true
+
+    get:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    post:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+  /bar/{barId}/items/{itemId}:
+    parameters:
+      - in: path
+        name: barId
+        schema:
+          type: integer
+          minimum: 1
+        required: true
+
+      - in: path
+        name: itemId
+        schema:
+          type: integer
+          minimum: 1
+        required: true
+
+    get:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    put:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+  /bar/{barId}/items/{itemId}/picture:
+    parameters:
+      - in: path
+        name: barId
+        schema:
+          type: integer
+          minimum: 1
+        required: true
+
+      - in: path
+        name: itemId
+        schema:
+          type: integer
+          minimum: 1
+        required: true
+
+    put:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK
+
+    delete:
+      summary: Gets an order
+      description: >-
+        This operation shows how to override the global security defined above,
+        as we want to open it up for all users.
+
+      responses:
+        '200':
+          description: OK

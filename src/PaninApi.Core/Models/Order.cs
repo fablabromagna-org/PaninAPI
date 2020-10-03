@@ -8,7 +8,7 @@ namespace PaninApi.Core.Models
     {
         public Guid Id { get; set; }
         
-        public virtual User User { get; set; }
+        public virtual Student Student { get; set; }
         
         public string UserId { get; set; }
         

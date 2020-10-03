@@ -10,8 +10,12 @@ namespace PaninApi.Core.Models
         
         public virtual IEnumerable<Item> Items { get; set; }
         
-        public virtual IEnumerable<Barman> Barmen { get; set; }
+        public virtual IEnumerable<BarmanCoffeeShop> Barmen { get; set; }
         
         public virtual IEnumerable<Order> Orders { get; set; }
+        
+        public virtual School School { get; set; }
+        
+        public int SchoolId { get; set; }
     }
 }

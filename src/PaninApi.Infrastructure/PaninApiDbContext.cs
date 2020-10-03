@@ -10,14 +10,17 @@ namespace PaninApi.Infrastructure
         }
 
         public virtual DbSet<BaseUser> BaseUsers { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Student> Users { get; set; }
         public virtual DbSet<Barman> Barmen { get; set; }
         public virtual DbSet<CoffeeShop> CoffeeShops { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<OrderItem> OrderItems { get; set; }
+        public virtual DbSet<School> Schools { get; set; }
+        public virtual DbSet<BarmanCoffeeShop> BarmanCoffeeShops { get; set; }
+        public virtual DbSet<BarmanCoffeeShop> BarmanCoffeeShops { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+            protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region Keys
 
@@ -110,7 +113,7 @@ namespace PaninApi.Infrastructure
             modelBuilder.Entity<CoffeeShop>().HasMany(_ => _.Orders).WithOne(_ => _.CoffeeShop)
                 .HasForeignKey(_ => _.CoffeeShopId).OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<User>().HasMany(_ => _.Orders).WithOne(_ => _.User).HasForeignKey(_ => _.UserId)
+            modelBuilder.Entity<Student>().HasMany(_ => _.Orders).WithOne(_ => _.Student).HasForeignKey(_ => _.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             #endregion

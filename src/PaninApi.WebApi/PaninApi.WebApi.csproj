@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>94a75458-f01c-43c5-9628-2cb5d1bc1614</UserSecretsId>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PaninApi.Infrastructure\PaninApi.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>

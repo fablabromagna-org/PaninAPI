@@ -1,9 +1,9 @@
+using System.Collections.Generic;
+
 namespace PaninApi.Core.Models
 {
     public class Barman : BaseUser
     {
-        public virtual CoffeeShop CoffeeShop { get; set; }
-        
-        public int CoffeShopId { get; set; }
+        public virtual IEnumerable<BarmanCoffeeShop> CoffeeShops { get; set; }
     }
 }

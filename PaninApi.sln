@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.WebApi", "src\Pani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Tests.Commons", "tests\PaninApi.Tests.Commons\PaninApi.Tests.Commons.csproj", "{3F8A4046-8217-47F8-94E5-4EDF34980BCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Tests.WebApi", "tests\PaninApi.Tests.WebApi\PaninApi.Tests.WebApi.csproj", "{FEF7ED75-2660-4D83-9636-B21B3259817E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,7 @@ Global
 		{A0DEAF33-8563-48BB-A858-0820C4DD054C} = {B692D14E-C97D-4252-ADC7-CC3D872C9CC7}
 		{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D} = {B692D14E-C97D-4252-ADC7-CC3D872C9CC7}
 		{3F8A4046-8217-47F8-94E5-4EDF34980BCA} = {74155CBA-885B-41C0-A9BC-4FCEC874ACCF}
+		{FEF7ED75-2660-4D83-9636-B21B3259817E} = {74155CBA-885B-41C0-A9BC-4FCEC874ACCF}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5E6F6195-187A-4103-9EBB-79B31B45C730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -40,5 +43,9 @@ Global
 		{3F8A4046-8217-47F8-94E5-4EDF34980BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F8A4046-8217-47F8-94E5-4EDF34980BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F8A4046-8217-47F8-94E5-4EDF34980BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF7ED75-2660-4D83-9636-B21B3259817E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF7ED75-2660-4D83-9636-B21B3259817E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF7ED75-2660-4D83-9636-B21B3259817E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF7ED75-2660-4D83-9636-B21B3259817E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

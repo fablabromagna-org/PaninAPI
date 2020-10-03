@@ -7,6 +7,6 @@ namespace PaninApi.Core.Enums
         Accepted,
         Ready,
         Rejected,
-        Completed
+        Expired // Not in the database (only at runtime when we receive a request)
     }
 }
