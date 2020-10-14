@@ -13,9 +13,7 @@ namespace PaninApi.Core.Dtos.MeDtos
 
         [JsonPropertyName("isResponsible")] public bool IsResponsible { get; set; }
 
-        [JsonPropertyName("inProgressOrders")] public PagingDto<BasicOrderDto> InProgressOrders { get; set; }
-
-        [JsonPropertyName("pastOrders")] public PagingDto<BasicOrderDto> PastOrders { get; set; }
+        [JsonPropertyName("inProgressOrders")] public IEnumerable<BasicOrderDto> InProgressOrders { get; set; }
         
         [JsonPropertyName("coffeeShops")] public IEnumerable<int> CoffeeShops { get; set; }
     }

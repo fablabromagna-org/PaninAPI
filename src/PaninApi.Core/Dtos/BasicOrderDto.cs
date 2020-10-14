@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using PaninApi.Core.Enums;
 using PaninApi.Core.Models;
@@ -19,7 +20,7 @@ namespace PaninApi.Core.Dtos
         public int CoffeeShopId { get; set; }
         
         [JsonPropertyName("items")]
-        public virtual PagingDto<OrderItem> Items { get; set; }
+        public virtual IEnumerable<OrderItem> Items { get; set; }
         
         [JsonPropertyName("notes")]
         public string Notes { get; set; }
