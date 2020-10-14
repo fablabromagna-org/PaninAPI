@@ -1,10 +1,11 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 using PaninApi.Core.Dtos.MeDtos;
 using PaninApi.Core.Dtos.Services;
 
 namespace PaninApi.WebApi.Controllers
 {
-    public class MeController : BaseAuthApiController
+    public class MeController : BaseApiController
     {
         private readonly IUserService _userService;
 
@@ -16,12 +17,9 @@ namespace PaninApi.WebApi.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            _userService.GetOrCreate();
+            string test = DateTime.Now.ToUniversalTime().ToString();
             
-            return Ok(new StudentMeDto()
-            {
-                
-            })
+            throw new NotImplementedException();
         }
     }
 }

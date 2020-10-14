@@ -6,10 +6,10 @@ using PaninApi.Infrastructure.Options;
 
 namespace PaninApi.WebApi.Options
 {
-    public sealed class ConfigureJwtNamedOptions : IConfigureNamedOptions<JwtBearerOptions>
+    public class ConfigureJwtNamedOptions : IConfigureNamedOptions<JwtBearerOptions>
     {
         private readonly JwtAuthoritiesOption _jwtAuthority;
-
+        
         public ConfigureJwtNamedOptions(IOptions<JwtAuthoritiesOption> jwtAuthorities)
         {
             _jwtAuthority = jwtAuthorities.Value;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using PaninApi.Core.Enums;
 
 namespace PaninApi.Core.Dtos.MeDtos
@@ -9,7 +10,7 @@ namespace PaninApi.Core.Dtos.MeDtos
         {
             AccountType = AccountType.Barman;
         }
-        
-        public IEnumerable<int> CoffeShopIds { get; set; }
+
+        [JsonPropertyName("coffeeShops")] public IEnumerable<int> CoffeShopIds { get; set; }
     }
 }

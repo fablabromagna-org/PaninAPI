@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using PaninApi.Core.Enums;
 
 namespace PaninApi.Core.Dtos.MeDtos
@@ -8,7 +9,11 @@ namespace PaninApi.Core.Dtos.MeDtos
         {
             AccountType = AccountType.User;
         }
-        
-        
+
+        [JsonPropertyName("isResponsible")] public bool IsResponsible { get; set; }
+
+        [JsonPropertyName("inProgressOrders")] public PagingDto<BasicOrderDto> InProgressOrders { get; set; }
+
+        [JsonPropertyName("pastOrders")] public PagingDto<BasicOrderDto> PastOrders { get; set; }
     }
 }

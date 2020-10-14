@@ -18,9 +18,8 @@ namespace PaninApi.Infrastructure
         public virtual DbSet<OrderItem> OrderItems { get; set; }
         public virtual DbSet<School> Schools { get; set; }
         public virtual DbSet<BarmanCoffeeShop> BarmanCoffeeShops { get; set; }
-        public virtual DbSet<BarmanCoffeeShop> BarmanCoffeeShops { get; set; }
 
-            protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region Keys
 
@@ -29,7 +28,8 @@ namespace PaninApi.Infrastructure
             modelBuilder.Entity<Order>().HasKey(_ => _.Id);
             modelBuilder.Entity<Item>().HasKey(_ => _.Id);
             modelBuilder.Entity<OrderItem>().HasKey(_ => new {_.ItemId, _.OrderId});
-            
+            modelBuilder.Entity<School>().HasKey(_ => _.Id);
+
             #endregion
 
             #region Default values
@@ -38,16 +38,11 @@ namespace PaninApi.Infrastructure
             modelBuilder.Entity<CoffeeShop>().Property(_ => _.Id).ValueGeneratedOnAdd();
             modelBuilder.Entity<Order>().Property(_ => _.Id).ValueGeneratedOnAdd();
             modelBuilder.Entity<Item>().Property(_ => _.Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<School>().Property(_ => _.Id).ValueGeneratedOnAdd();
 
             #endregion
 
             #region Required
-
-            modelBuilder.Entity<BaseUser>().Property(_ => _.FamilyName).IsRequired();
-            modelBuilder.Entity<BaseUser>().Property(_ => _.GivenName).IsRequired();
-            modelBuilder.Entity<BaseUser>().Property(_ => _.Email).IsRequired();
-
-            modelBuilder.Entity<Barman>().Property(_ => _.CoffeShopId).IsRequired();
 
             modelBuilder.Entity<CoffeeShop>().Property(_ => _.Name).IsRequired();
 
@@ -62,16 +57,16 @@ namespace PaninApi.Infrastructure
             modelBuilder.Entity<Order>().Property(_ => _.CreationDate).IsRequired();
             modelBuilder.Entity<Order>().Property(_ => _.UserId).IsRequired();
             modelBuilder.Entity<Order>().Property(_ => _.Notes).IsRequired(false);
-            
+
             modelBuilder.Entity<OrderItem>().Property(_ => _.ItemId).IsRequired();
             modelBuilder.Entity<OrderItem>().Property(_ => _.OrderId).IsRequired();
-            
+
+            modelBuilder.Entity<BarmanCoffeeShop>().Property(_ => _.BarmanId).IsRequired();
+            modelBuilder.Entity<BarmanCoffeeShop>().Property(_ => _.CoffeeShopId).IsRequired();
+
             #endregion
 
             #region Charset
-
-            modelBuilder.Entity<BaseUser>().Property(_ => _.FamilyName).IsUnicode();
-            modelBuilder.Entity<BaseUser>().Property(_ => _.GivenName).IsUnicode();
 
             modelBuilder.Entity<CoffeeShop>().Property(_ => _.Name).IsUnicode();
 
@@ -79,6 +74,9 @@ namespace PaninApi.Infrastructure
             modelBuilder.Entity<Item>().Property(_ => _.Description).IsUnicode();
 
             modelBuilder.Entity<Order>().Property(_ => _.Notes).IsUnicode();
+
+            modelBuilder.Entity<School>().Property(_ => _.Name).IsUnicode();
+            modelBuilder.Entity<School>().Property(_ => _.Tenant).IsUnicode();
 
             #endregion
 
@@ -104,9 +102,6 @@ namespace PaninApi.Infrastructure
 
             #region 1-n relationships
 
-            modelBuilder.Entity<CoffeeShop>().HasMany(_ => _.Barmen).WithOne(_ => _.CoffeeShop)
-                .HasForeignKey(_ => _.CoffeShopId).OnDelete(DeleteBehavior.Cascade);
-
             modelBuilder.Entity<CoffeeShop>().HasMany(_ => _.Items).WithOne(_ => _.CoffeeShop)
                 .HasForeignKey(_ => _.CoffeeShopId).OnDelete(DeleteBehavior.Cascade);
 
@@ -115,6 +110,9 @@ namespace PaninApi.Infrastructure
 
             modelBuilder.Entity<Student>().HasMany(_ => _.Orders).WithOne(_ => _.Student).HasForeignKey(_ => _.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<School>().HasMany(_ => _.CoffeeShops).WithOne(_ => _.School)
+                .HasForeignKey(_ => _.SchoolId).OnDelete(DeleteBehavior.Cascade);
 
             #endregion
 
@@ -125,6 +123,12 @@ namespace PaninApi.Infrastructure
 
             modelBuilder.Entity<Item>().HasMany(_ => _.Orders).WithOne(_ => _.Item).HasForeignKey(_ => _.ItemId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CoffeeShop>().HasMany(_ => _.Barmen).WithOne(_ => _.CoffeeShop)
+                .HasForeignKey(_ => _.CoffeeShopId).OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Barman>().HasMany(_ => _.CoffeeShops).WithOne(_ => _.Barman)
+                .HasForeignKey(_ => _.BarmanId).OnDelete(DeleteBehavior.Cascade);
 
             #endregion
 

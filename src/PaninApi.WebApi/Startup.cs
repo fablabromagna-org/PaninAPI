@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
 using PaninApi.Infrastructure;
 using PaninApi.Infrastructure.Options;
-using PaninApi.WebApi.Options;    
+using PaninApi.WebApi.Options;
 
 namespace PaninApi.WebApi
 {
@@ -15,9 +15,16 @@ namespace PaninApi.WebApi
     {
         private readonly IConfiguration _configuration;
 
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostEnvironment env)
         {
-            _configuration = configuration;
+            var configurationBuilder = new ConfigurationBuilder();
+            configurationBuilder.AddConfiguration(configuration)
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .AddUserSecrets(typeof(Startup).Assembly)
+                .AddEnvironmentVariables();
+
+            _configuration = configurationBuilder.Build();
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -31,6 +38,7 @@ namespace PaninApi.WebApi
 
             services.AddAuthentication().AddJwtBearer();
 
+            services.AddControllers();
             services.AddConnections();
         }
 
