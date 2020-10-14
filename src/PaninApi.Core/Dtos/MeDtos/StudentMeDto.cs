@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using PaninApi.Core.Enums;
 
@@ -15,5 +16,7 @@ namespace PaninApi.Core.Dtos.MeDtos
         [JsonPropertyName("inProgressOrders")] public PagingDto<BasicOrderDto> InProgressOrders { get; set; }
 
         [JsonPropertyName("pastOrders")] public PagingDto<BasicOrderDto> PastOrders { get; set; }
+        
+        [JsonPropertyName("coffeeShops")] public IEnumerable<int> CoffeeShops { get; set; }
     }
 }
