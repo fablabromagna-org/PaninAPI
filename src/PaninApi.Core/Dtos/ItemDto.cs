@@ -7,6 +7,8 @@ namespace PaninApi.Core.Dtos
     {
         [JsonPropertyName("id")] public int Id { get; set; }
 
+        [JsonPropertyName("picture")] public string Picture { get; set; }
+
         [JsonPropertyName("name")] public string Name { get; set; }
 
         [JsonPropertyName("description")] public string Description { get; set; }
