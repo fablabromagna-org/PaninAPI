@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Moq;
-using PaninApi.Infrastructure.Options;
 using PaninApi.WebApi.Options;
 using Xunit;
 using MsExtensionsOptions = Microsoft.Extensions.Options.Options;

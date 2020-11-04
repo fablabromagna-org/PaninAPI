@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PaninApi.Core.Models;
 
-namespace PaninApi.Infrastructure
+namespace PaninApi.WebApi
 {
     public class PaninApiDbContext : DbContext
     {
@@ -63,6 +63,9 @@ namespace PaninApi.Infrastructure
 
             modelBuilder.Entity<BarmanCoffeeShop>().Property(_ => _.BarmanId).IsRequired();
             modelBuilder.Entity<BarmanCoffeeShop>().Property(_ => _.CoffeeShopId).IsRequired();
+
+            modelBuilder.Entity<School>().Property(_ => _.Name).IsRequired();
+            modelBuilder.Entity<School>().Property(_ => _.Tenant).IsRequired();
 
             #endregion
 

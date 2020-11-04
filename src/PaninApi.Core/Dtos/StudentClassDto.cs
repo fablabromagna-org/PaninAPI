@@ -7,5 +7,7 @@ namespace PaninApi.Core.Dtos
         [JsonPropertyName("class")] public int Class { get; set; }
 
         [JsonPropertyName("section")] public string Section { get; set; }
+
+        [JsonPropertyName("display")] public string Display => $"{Class} {Section}";
     }
 }

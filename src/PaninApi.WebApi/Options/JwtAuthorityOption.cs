@@ -1,4 +1,4 @@
-namespace PaninApi.Infrastructure.Options
+namespace PaninApi.WebApi.Options
 {
     public class JwtAuthorityOption
     {

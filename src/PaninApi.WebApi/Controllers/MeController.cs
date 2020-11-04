@@ -1,25 +1,29 @@
-using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PaninApi.Core.Dtos.MeDtos;
-using PaninApi.Core.Dtos.Services;
+using PaninApi.Core.Services;
+using PaninApi.WebApi.Consts;
 
 namespace PaninApi.WebApi.Controllers
 {
-    public class MeController : BaseApiController
+    public class MeController : BaseAuthApiController
     {
-        private readonly IUserService _userService;
+        private readonly ISchoolService _schoolService;
 
-        public MeController(IUserService userService)
+        public MeController(ISchoolService schoolService)
         {
-            _userService = userService;
+            _schoolService = schoolService;
         }
-        
+
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Me()
         {
-            string test = DateTime.Now.ToUniversalTime().ToString();
-            
-            throw new NotImplementedException();
+            var org = HttpContext.User.Claims.FirstOrDefault(_ => _.Type == CustomClaims.GSuiteOrg);
+
+            if (org is null)
+            {
+                
+            }
         }
     }
 }

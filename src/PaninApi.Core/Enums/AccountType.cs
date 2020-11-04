@@ -2,7 +2,7 @@ namespace PaninApi.Core.Enums
 {
     public enum AccountType
     {
-        User,
+        Student,
         Barman,
         Admin
     }

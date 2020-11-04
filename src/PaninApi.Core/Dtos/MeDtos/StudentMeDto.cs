@@ -8,10 +8,8 @@ namespace PaninApi.Core.Dtos.MeDtos
     {
         public StudentMeDto()
         {
-            AccountType = AccountType.User;
+            AccountType = AccountType.Student;
         }
-
-        [JsonPropertyName("isResponsible")] public bool IsResponsible { get; set; }
 
         [JsonPropertyName("inProgressOrders")] public IEnumerable<BasicOrderDto> InProgressOrders { get; set; }
         

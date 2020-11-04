@@ -20,4 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PaninApi.Core\PaninApi.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Options" />
+  </ItemGroup>
 </Project>

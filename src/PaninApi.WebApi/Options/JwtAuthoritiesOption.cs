@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PaninApi.Infrastructure.Options
+namespace PaninApi.WebApi.Options
 {
     public class JwtAuthoritiesOption
     {

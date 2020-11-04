@@ -5,8 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
-using PaninApi.Infrastructure;
-using PaninApi.Infrastructure.Options;
 using PaninApi.WebApi.Options;
 
 namespace PaninApi.WebApi

@@ -2,7 +2,6 @@ using System;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using PaninApi.Infrastructure.Options;
 
 namespace PaninApi.WebApi.Options
 {

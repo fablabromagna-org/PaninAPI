@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using PaninApi.Core.Enums;
 
@@ -15,7 +16,7 @@ namespace PaninApi.Core.Dtos
 
         [JsonPropertyName("category")] public ItemCategory Category { get; set; }
 
-        [JsonPropertyName("modifiers")] public ItemModifier Modifiers { get; set; }
+        [JsonPropertyName("modifiers")] public IEnumerable<string> Modifiers { get; set; }
 
         [JsonPropertyName("price")] public int Price { get; set; }
 
