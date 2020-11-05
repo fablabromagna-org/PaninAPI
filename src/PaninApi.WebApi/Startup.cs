@@ -37,6 +37,8 @@ namespace PaninApi.WebApi
             services.AddAuthentication().AddJwtBearer();
 
             services.AddControllers();
+            services.BuildServiceProvider()
+                services
             services.AddConnections();
         }
 
