@@ -1,29 +1,24 @@
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PaninApi.Core.Services;
-using PaninApi.WebApi.Consts;
+using PaninApi.WebApi.Chains;
 
 namespace PaninApi.WebApi.Controllers
 {
     public class MeController : BaseAuthApiController
     {
-        private readonly ISchoolService _schoolService;
+        private readonly IUserChain _userChain;
 
-        public MeController(ISchoolService schoolService)
+        public MeController(IUserChain userChain)
         {
-            _schoolService = schoolService;
+            _userChain = userChain;
         }
 
         [HttpGet]
         public async Task<IActionResult> Me()
         {
-            var org = HttpContext.User.Claims.FirstOrDefault(_ => _.Type == CustomClaims.GSuiteOrg);
+            var user = await _userChain.HandleAsync(HttpContext.User);
 
-            if (org is null)
-            {
-                
-            }
+            return null;
         }
     }
 }

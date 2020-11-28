@@ -4,7 +4,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B692D14E-C97
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{74155CBA-885B-41C0-A9BC-4FCEC874ACCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Core", "src\PaninApi.Core\PaninApi.Core.csproj", "{5E6F6195-187A-4103-9EBB-79B31B45C730}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.Abstractions", "src\PaninApi.Abstractions\PaninApi.Abstractions.csproj", "{5E6F6195-187A-4103-9EBB-79B31B45C730}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaninApi.WebApi", "src\PaninApi.WebApi\PaninApi.WebApi.csproj", "{4B3753B9-CA1F-42FD-BC64-4B1B6E75D82D}"
 EndProject

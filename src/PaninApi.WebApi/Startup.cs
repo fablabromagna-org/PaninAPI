@@ -1,3 +1,5 @@
+using System;
+using CoRDependencyInjection.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -5,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Logging;
+using PaninApi.WebApi.Chains;
+using PaninApi.WebApi.Handlers.User;
 using PaninApi.WebApi.Options;
 
 namespace PaninApi.WebApi
@@ -27,8 +31,8 @@ namespace PaninApi.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PaninApiDbContext>(builder =>
-                builder.UseNpgsql(_configuration.GetConnectionString("default")));
+            /*  services.AddDbContext<PaninApiDbContext>(builder =>
+                  builder.UseNpgsql(_configuration.GetConnectionString("default")));*/
 
             services.Configure<JwtAuthoritiesOption>(_configuration);
 
@@ -37,10 +41,12 @@ namespace PaninApi.WebApi
             services.AddAuthentication().AddJwtBearer();
 
             services.AddControllers();
-            services.BuildServiceProvider()
-                services
+
+            services.AddChain<IUserChain>().WithHandler<StudentHandler>().BuildChain();
+
             services.AddConnections();
         }
+
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

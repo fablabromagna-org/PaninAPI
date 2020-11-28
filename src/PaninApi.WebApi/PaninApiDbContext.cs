@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PaninApi.Core.Models;
+using PaninApi.Abstractions.Models;
 
 namespace PaninApi.WebApi
 {
@@ -10,7 +10,7 @@ namespace PaninApi.WebApi
         }
 
         public virtual DbSet<BaseUser> BaseUsers { get; set; }
-        public virtual DbSet<Student> Users { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Barman> Barmen { get; set; }
         public virtual DbSet<CoffeeShop> CoffeeShops { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -29,6 +29,7 @@ namespace PaninApi.WebApi
             modelBuilder.Entity<Item>().HasKey(_ => _.Id);
             modelBuilder.Entity<OrderItem>().HasKey(_ => new {_.ItemId, _.OrderId});
             modelBuilder.Entity<School>().HasKey(_ => _.Id);
+            modelBuilder.Entity<BarmanCoffeeShop>().HasKey(_ => new {_.BarmanId, _.CoffeeShopId});
 
             #endregion
 
@@ -100,6 +101,8 @@ namespace PaninApi.WebApi
             #region Owns
 
             modelBuilder.Entity<Order>().OwnsOne(_ => _.Class);
+            
+            modelBuilder.Entity<Student>().OwnsOne(_ => _.StudentClass);
 
             #endregion
 
