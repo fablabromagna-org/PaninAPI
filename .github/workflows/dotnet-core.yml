@@ -41,12 +41,9 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
         repository: fablabromagna-org/PaninAPI/paninapi
-        tag_with_ref: true
         
     - name: Build and push Docker images
       uses: docker/build-push-action@v2.2.0
       with:
-        tags: latest
         push: true
-
     
