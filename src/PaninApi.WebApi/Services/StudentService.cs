@@ -26,8 +26,9 @@ namespace PaninApi.WebApi.Services
             {
                 throw new ArgumentNullException(nameof(school));
             }
-            
-            var student = await _dbContext.Students.Include(_ => _.Orders).FirstOrDefaultAsync(_ => _.Id == id && _.School.Id == school.Id)
+
+            var student = await _dbContext.Students.Include(_ => _.Orders)
+                .FirstOrDefaultAsync(_ => _.Id == id && _.School.Id == school.Id)
                 .ConfigureAwait(false);
 
             if (student is null)
@@ -43,6 +44,24 @@ namespace PaninApi.WebApi.Services
             }
 
             return student;
+        }
+
+        public async Task SetStudentClassAsync(Student student, StudentClass studentClass)
+        {
+            if (student is null)
+            {
+                throw new ArgumentNullException(nameof(student));
+            }
+
+            if (studentClass is null)
+            {
+                throw new ArgumentNullException(nameof(studentClass));
+            }
+            
+            student.StudentClass = studentClass;
+
+            _dbContext.Update(student);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
