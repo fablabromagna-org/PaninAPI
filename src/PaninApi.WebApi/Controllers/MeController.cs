@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using PaninApi.Abstractions.Dtos;
 using PaninApi.Abstractions.Dtos.MeDtos;
@@ -16,7 +17,7 @@ namespace PaninApi.WebApi.Controllers
         private readonly IMapper _mapper;
 
         private readonly IStudentService _studentService;
-        
+
         public MeController(IUserChain userChain, IMapper mapper, IStudentService studentService)
         {
             _userChain = userChain;
@@ -31,11 +32,11 @@ namespace PaninApi.WebApi.Controllers
 
             if (user is null)
             {
-                return BadRequest();
+                return Forbid();
             }
-            
+
             var dto = _mapper.Map(user, user.GetType(), typeof(MeDto));
-            
+
             return Ok(dto);
         }
 
@@ -43,7 +44,6 @@ namespace PaninApi.WebApi.Controllers
         public async Task<IActionResult> StudentClass(InputStudentClassDto studentClassDto)
         {
             // ToDo: refactor with policies
-
             if (!(await _userChain.HandleAsync(HttpContext.User) is Student student))
             {
                 return Forbid();
