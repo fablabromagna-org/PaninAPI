@@ -7,5 +7,9 @@ namespace PaninApi.Abstractions.Models
         public virtual IEnumerable<Order> Orders { get; set; }
         
         public StudentClass StudentClass { get; set; }
+        
+        public School School { get; set; }
+
+        public int SchoolId { get; set; }
     }
 }

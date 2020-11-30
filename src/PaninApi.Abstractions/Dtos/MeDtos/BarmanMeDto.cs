@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
-using PaninApi.Abstractions.Enums;
 
 namespace PaninApi.Abstractions.Dtos.MeDtos
 {

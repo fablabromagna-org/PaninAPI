@@ -11,5 +11,7 @@ namespace PaninApi.Abstractions.Models
         public string Tenant { get; set; }
         
         public virtual IEnumerable<CoffeeShop> CoffeeShops { get; set; }
+        
+        public virtual IEnumerable<Student> Students { get; set; }
     }
 }

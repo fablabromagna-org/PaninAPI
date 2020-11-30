@@ -68,6 +68,8 @@ namespace PaninApi.WebApi
             modelBuilder.Entity<School>().Property(_ => _.Name).IsRequired();
             modelBuilder.Entity<School>().Property(_ => _.Tenant).IsRequired();
 
+            modelBuilder.Entity<Student>().Property(_ => _.SchoolId).IsRequired();
+
             #endregion
 
             #region Charset
@@ -101,7 +103,7 @@ namespace PaninApi.WebApi
             #region Owns
 
             modelBuilder.Entity<Order>().OwnsOne(_ => _.Class);
-            
+
             modelBuilder.Entity<Student>().OwnsOne(_ => _.StudentClass);
 
             #endregion
@@ -116,6 +118,9 @@ namespace PaninApi.WebApi
 
             modelBuilder.Entity<Student>().HasMany(_ => _.Orders).WithOne(_ => _.Student).HasForeignKey(_ => _.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<School>().HasMany(_ => _.Students).WithOne(_ => _.School)
+                .HasForeignKey(_ => _.SchoolId).OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<School>().HasMany(_ => _.CoffeeShops).WithOne(_ => _.School)
                 .HasForeignKey(_ => _.SchoolId).OnDelete(DeleteBehavior.Cascade);
