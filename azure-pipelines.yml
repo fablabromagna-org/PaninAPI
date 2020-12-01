@@ -25,3 +25,6 @@ steps:
     repository: 'paninapi/paninapi'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: |
+      latest
+      v0.0.1.$(Build.BuildId)
