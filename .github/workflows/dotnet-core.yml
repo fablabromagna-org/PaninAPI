@@ -46,6 +46,5 @@ jobs:
       uses: docker/build-push-action@v2.2.0
       with:
         push: ${{ github.event_name != 'pull_request' }}
-        tag: ${{ steps.docker_meta.outputs.tags }}
-        labels: ${{ steps.docker_meta.outputs.labels }}
+        tags: fablabromagna-org/PaninAPI/paninapi:latest
     
