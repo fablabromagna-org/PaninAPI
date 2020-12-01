@@ -59,11 +59,10 @@ namespace PaninApi.WebApi
         {
             if (env.IsDevelopment())
             {
+                app.UseHttpsRedirection();
                 app.UseDeveloperExceptionPage();
                 IdentityModelEventSource.ShowPII = true;
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
