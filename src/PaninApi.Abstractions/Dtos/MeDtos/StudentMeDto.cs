@@ -13,7 +13,7 @@ namespace PaninApi.Abstractions.Dtos.MeDtos
 
         [JsonPropertyName("inProgressOrders")] public IEnumerable<BasicOrderDto> InProgressOrders { get; set; }
         
-        [JsonPropertyName("coffeeShops")] public IEnumerable<int> CoffeeShops { get; set; }
+        [JsonPropertyName("coffeeShops")] public IEnumerable<CoffeeShopDto> CoffeeShops { get; set; }
         
         [JsonPropertyName("studentClass")] public StudentClassDto StudentClass { get; set; }
     }

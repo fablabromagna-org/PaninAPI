@@ -19,6 +19,7 @@ namespace PaninApi.WebApi
             CreateMap<Order, BasicOrderDto>();
             CreateMap<StudentClass, StudentClassDto>();
             CreateMap<InputStudentClassDto, StudentClass>();
+            CreateMap<CoffeeShop, CoffeeShopDto>();
         }
     }
 }

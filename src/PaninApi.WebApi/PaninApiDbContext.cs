@@ -91,7 +91,7 @@ namespace PaninApi.WebApi
             modelBuilder.Entity<CoffeeShop>().Property(_ => _.Name).HasMaxLength(30);
 
             modelBuilder.Entity<Item>().Property(_ => _.Name).HasMaxLength(30);
-
+            
             #endregion
 
             #region Conversions

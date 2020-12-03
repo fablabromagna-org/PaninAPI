@@ -1,6 +1,5 @@
 using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using PaninApi.Abstractions.Dtos;
 using PaninApi.Abstractions.Dtos.MeDtos;
