@@ -24,8 +24,8 @@ namespace PaninApi.WebApi.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        [Route("/v1/[controller]/{coffeeShopId:int}/[action]/{page:int?}")]
-        public async Task<IActionResult> Items(int coffeeShopId, int page = 1)
+        [Route("/v1/[controller]/{coffeeShopId:int}/[action]")]
+        public async Task<IActionResult> Items(int coffeeShopId)
         {
             if (coffeeShopId < 1)
             {
@@ -35,12 +35,7 @@ namespace PaninApi.WebApi.Controllers
                     Detail = $"Requested coffee shop with id #{coffeeShopId} but it is invalid."
                 });
             }
-
-            if (page < 1)
-            {
-                page = 1;
-            }
-
+            
             var coffeeShop = await _coffeeShopService.GetByIdAsync(coffeeShopId).ConfigureAwait(false);
 
             if (coffeeShop is null)
@@ -52,13 +47,11 @@ namespace PaninApi.WebApi.Controllers
                 });
             }
 
-            var items = coffeeShop.Items.OrderBy(_ => _.Id).Skip((page - 1) * 10).Take(10);
+            var items = coffeeShop.Items.OrderBy(_ => _.Id);
 
             var dto = new PagingDto<ItemDto>
             {
-                Total = coffeeShop.Items.Count(),
                 Count = items.Count(),
-                CurrentPage = page,
                 Values = _mapper.Map<IEnumerable<ItemDto>>(items)
             };
 
