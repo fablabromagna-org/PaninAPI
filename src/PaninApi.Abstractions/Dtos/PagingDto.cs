@@ -11,10 +11,6 @@ namespace PaninApi.Abstractions.Dtos
 
         [JsonPropertyName("currPage")] public int CurrentPage { get; set; }
 
-        [JsonPropertyName("prevPage")] public string PrevPage { get; set; }
-
-        [JsonPropertyName("nextPage")] public string NextPage { get; set; }
-
         [JsonPropertyName("values")] public IEnumerable<TValue> Values { get; set; }
     }
 }

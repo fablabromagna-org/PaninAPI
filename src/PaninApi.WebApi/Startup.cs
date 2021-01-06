@@ -1,3 +1,4 @@
+using System;
 using AutoMapper;
 using CoRDependencyInjection.Extensions;
 using FluentValidation;
@@ -6,10 +7,12 @@ using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web;
 using Microsoft.IdentityModel.Logging;
 using PaninApi.Abstractions.Dtos;
@@ -19,6 +22,7 @@ using PaninApi.WebApi.Consts;
 using PaninApi.WebApi.Handlers.User;
 using PaninApi.WebApi.Services;
 using PaninApi.WebApi.Validators;
+using Serilog;
 
 namespace PaninApi.WebApi
 {
@@ -54,6 +58,7 @@ namespace PaninApi.WebApi
 
             services.AddTransient<ISchoolService, SchoolService>();
             services.AddTransient<IStudentService, StudentService>();
+            services.AddTransient<ICoffeeShopService, CoffeeShopService>();
 
             #endregion
 
@@ -64,6 +69,22 @@ namespace PaninApi.WebApi
             #region Validators
 
             services.AddTransient<IValidator<InputStudentClassDto>, InputStudentClassDtoValidator>();
+
+            #endregion
+
+            #region Logging
+
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .CreateLogger();
+
+            services.AddLogging(builder =>
+            {
+                builder.ClearProviders();
+                builder.AddSerilog(Log.Logger);
+            });
 
             #endregion
 
