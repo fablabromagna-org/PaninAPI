@@ -49,11 +49,7 @@ namespace PaninApi.WebApi.Controllers
 
             var items = coffeeShop.Items.OrderBy(_ => _.Id);
 
-            var dto = new PagingDto<ItemDto>
-            {
-                Count = items.Count(),
-                Values = _mapper.Map<IEnumerable<ItemDto>>(items)
-            };
+            var dto = _mapper.Map<IEnumerable<ItemDto>>(items);
 
             return Ok(dto);
         }
