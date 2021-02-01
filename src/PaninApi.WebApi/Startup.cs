@@ -1,4 +1,3 @@
-using System;
 using AutoMapper;
 using CoRDependencyInjection.Extensions;
 using FluentValidation;
@@ -7,7 +6,6 @@ using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,9 +14,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web;
 using Microsoft.IdentityModel.Logging;
 using PaninApi.Abstractions.Dtos;
+using PaninApi.Abstractions.Exceptions;
 using PaninApi.Abstractions.Services;
 using PaninApi.WebApi.Chains;
 using PaninApi.WebApi.Consts;
+using PaninApi.WebApi.Filters;
 using PaninApi.WebApi.Handlers.User;
 using PaninApi.WebApi.Services;
 using PaninApi.WebApi.Validators;
@@ -52,7 +52,7 @@ namespace PaninApi.WebApi
 
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddControllers().AddFluentValidation();
+            services.AddControllers(options => options.Filters.Add<ProblemExceptionFilter>()).AddFluentValidation();
 
             #region Services
 
