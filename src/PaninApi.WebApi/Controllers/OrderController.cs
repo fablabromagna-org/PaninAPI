@@ -59,6 +59,13 @@ namespace PaninApi.WebApi.Controllers
             return Ok(dto);
         }
 
+        [HttpPost]
+        [Route("/v1/[controller]/complete")]
+        public async Task<IActionResult> CreateOrder(CompleteOrderDto completeOrderDto)
+        {
+            
+        }
+
         [HttpPut]
         [Route("/v1/[controller]/{orderId:guid}")]
         public async Task<IActionResult> UpdateOrder([FromBody] OrderDto newItem, Guid orderId)
@@ -82,7 +89,7 @@ namespace PaninApi.WebApi.Controllers
                 throw new InvalidCoffeeShopForUserException(user, item.CoffeeShop);
             }
             
-            
+            _orderService.
         }
 
         [HttpDelete]
@@ -100,6 +107,7 @@ namespace PaninApi.WebApi.Controllers
         [HttpGet]
         public Task<IActionResult> Orders()
         {
+            
         }
     }
 }
